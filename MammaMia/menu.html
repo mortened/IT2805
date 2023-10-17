@@ -3,17 +3,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karantina&family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
     <iframe src="components/nav.html" frameborder="0"></iframe>
-    <div>
+    <div class="header">
         <h1>Menu</h1>
     </div>
+    <div id="menu">
+        <div id="menu_sidebar">
+            <ul>
+                <li>Menu del Cibo
+                    <ul>
+                        <li>Antipasti</li>
+                        <li>Insalate</li>
+                        <li>Pizze</li>
+                        <li>Pizze Bianche</li>
+                        <li>Dolci</li>
+                    </ul>
+                </li>
+                <li>Menu delle Bevande
+                    <ul>
+                        <li>Bevande Analcoliche</li>
+                        <li>Vini</li>
+                        <li>Birra</li>
+                        <li>Distillati</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div id="menu_content">
+            <div id="menu_food">
+                <div id="antipasti">
+                    <h2>Antipasti</h2>
+                    <div class="menu_boxes">
+                        <div class="menu_item">
+                            <h3>Bruschetta</h3>
+                            <p>Toasted bread topped with fresh tomatoes, garlic, basil, and extra virgin olive oil.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Caprese Salad</h3>
+                            <p>Sliced tomatoes, fresh mozzarella, basil, and balsamic reduction.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Fried Calamari</h3>
+                            <p>Crispy, tender calamari rings served with marinara sauce.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Garlic Knots</h3>
+                            <p>Soft, baked knots of pizza dough brushed with garlic butter and herbs.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="insalate">
+                    <h2>Insalate</h2>
+                    <div class="menu_boxes">
+                        <div class="menu_item">
+                            <h3>Caesar Salad</h3>
+                            <p>Romaine lettuce, croutons, Parmesan cheese, and Caesar dressing.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Garden Salad</h3>
+                            <p>Mixed greens, cherry tomatoes, cucumbers, and your choice of dressing.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Arugula and Prosciutto Salad</h3>
+                            <p>Arugula, thinly sliced prosciutto, shaved Parmesan, and balsamic vinaigrette.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="pizze">
+                    <h2>Pizze</h2>
+                    <div class="menu_boxes">
+                        <div class="menu_item">
+                            <h3>Margherita</h3>
+                            <p>San Marzano tomato sauce, fresh mozzarella, basil, and extra virgin olive oil.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Pepperoni</h3>
+                            <p>Tomato sauce, mozzarella, and classic pepperoni.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Funghi</h3>
+                            <p>White sauce, mozzarella, mixed mushrooms, truffle oil, and fresh thyme.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Quattro Formaggi</h3>
+                            <p>Four cheeses (mozzarella, gorgonzola, fontina, and Parmesan) with a touch of garlic.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Diavola</h3>
+                            <p>Tomato sauce, mozzarella, spicy salami, and red pepper flakes.</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="pizze_bianche">
+                    <h2>Pizze Bianche</h2>
+                    <div class="menu_boxes">
+                        <div class="menu_item">
+                            <h3>Bianca al Prosciutto</h3>
+                            <p>White sauce, mozzarella, prosciutto, arugula, and shaved Parmesan.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Quattro Formaggi Bianca</h3>
+                            <p>White sauce, four cheeses (mozzarella, gorgonzola, fontina, and Parmesan), and fresh herbs.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Funghi Bianca</h3>
+                            <p>White sauce, mozzarella, mixed mushrooms, truffle oil, and fresh thyme.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Spinach and Ricotta Bianca</h3>
+                            <p>White sauce, mozzarella, spinach, ricotta cheese, garlic, and a drizzle of olive oil.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Vegetarian Bianca</h3>
+                            <p>White sauce, mozzarella, bell peppers, red onions, olives, and artichoke hearts.</p>
+                        </div>
+                    </div>
+                </div>                
+                <div id="dolci">
+                    <h2>Dolci</h2>
+                    <div class="menu_boxes">
+                        <div class="menu_item">
+                            <h3>Tiramisu</h3>
+                            <p>Classic Italian dessert with layers of coffee-soaked ladyfingers and mascarpone cream.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Cannoli</h3>
+                            <p>Sicilian pastry tubes filled with sweet ricotta cheese and chocolate chips.</p>
+                        </div>
+                        <div class="menu_item">
+                            <h3>Panna Cotta</h3>
+                            <p>Creamy vanilla custard with a raspberry or caramel drizzle.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="menu_drinks">
+                <h2>Bevande Analcoliche</h2>
+                <div class="menu_boxes">
+                    <div class="menu_item">
+                        <h3>Soft Drinks</h3>
+                        <p>Coca-Cola, Diet Coke, Sprite, and more.</p>
+                    </div>
+                    <div class="menu_item">
+                        <h3>Italian Soda</h3>
+                        <p>Limonata, Aranciata, and more.</p>
+                    </div>
+                    <div class="menu_item">
+                        <h3>Bottled Water</h3>
+                        <p>Still or Sparkling.</p>
+                    </div>
+                    <div class="menu_item">
+                        <h3>Espresso</h3>
+                        <p>Single or Double shot.</p>
+                    </div>
+                </div>
+            
+                <h2>Vini</h2>
+                <div class="menu_boxes">
+                    <div class="menu_item">
+                        <h3>Red Wine</h3>
+                        <p>A selection of Italian red wines.</p>
+                    </div>
+                    <div class="menu_item">
+                        <h3>White Wine</h3>
+                        <p>A selection of Italian white wines.</p>
+                    </div>
+                </div>
+            
+                <h2>Birra</h2>
+                <div class="menu_boxes">
+                    <div class="menu_item">
+                        <h3>Italian Beer</h3>
+                        <p>A variety of Italian beer options.</p>
+                    </div>
+                    <div class="menu_item">
+                        <h3>Craft Beer</h3>
+                        <p>Local and imported craft beers.</p>
+                    </div>
+                </div>
+            
+                <h2>Distillati</h2>
+                <div class="menu_boxes">
+                    <div class="menu_item">
+                        <h3>Liquors</h3>
+                        <p>An assortment of Italian and international liquors.</p>
+                    </div>
+                    <div class="menu_item">
+                        <h3>Digestivi</h3>
+                        <p>Digestive spirits like Limoncello, Amaretto, and more.</p>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </div>
+
+
+    </div>
+
     <iframe id="footer-comp" src="components/footer.html" frameborder="0"></iframe>
 </body>
 </html>
