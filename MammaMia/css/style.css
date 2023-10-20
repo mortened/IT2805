@@ -1,0 +1,49 @@
+body {
+    font-family: 'Karantina', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#home {
+    background-image: url("../images/backgroundImage.jpg");
+    background-size: cover;
+    height: calc(100vh - 240px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+iframe {
+    height: 120px;
+}
+
+
+#buttons div {
+    text-align: center;
+    background-color: #a4a4a4;
+    opacity: 80%;
+    width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    margin: 75px 40%;
+    border-radius: 10px;
+}
+
+#buttons div:hover {
+    opacity: 100%;
+}
+
+#buttons div a {
+    color: black;
+    text-decoration: none;
+    font-size: 50px;
+}
+
+#footer-comp {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

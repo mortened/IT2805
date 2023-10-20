@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="css/stylesheet.css" /> 
+    <title>P2 Project Design</title>
+    <meta name="description" content="test">
+    <meta name="keywords" content="html test">
+    <h1 class="h1">
+        P2: Project design
+    </h1>
+    <h5>Erik, Johannes, Lasse, Morten og Sebastian</h5>
+    <h5>17.10.2023</h5>
+</head>
+<body>
+    <div class="textbox">
+        <h2>Administrative details</h2>
+            <p>Client name: Mamma Mia Pizzeria (Imaginary)
+            </p>
+    </div>
+    <div class="textbox">
+        <h2>Purpose, goals and audience</h2>
+            <p>The purpose for this website is to make it easy for potential customers to find information on the restaurant, including: the address, what is on the menu, contact information etc. 
+                The website will also have a reservation function embedded to let customers book a table for them and their party. 
+                The audience for this site should be the residents of (and tourists in) Trondheim who are especially interested in fine Italian pizza. 
+                The goal of this site will be to make an accessible and simple tool for restaurant goers to make their experience more seamless. 
+  </p>
+    </div>
+    <div class="textbox">
+        <h2>Navigation Structure</h2>
+            <p>The navigation structure for this website will be what is described as clique as seen below. 
+            </p>
+            <img src="./img/navstruc.jpeg" alt="Navigation Structure" width="500" height="250" class="navstruc">
+            <p>This structure lets the user access any part of the site from any one page, meaning you can get to ex. “about us” from either of the other pages, this is the same no matter what page you are currently in. 
+                This will be possible through a navigation bar in the header of the website which will be visible at any point, a hamburger menu may also be utilized in a mobile version (or when space is limited). 
+                When the user first opens the website, they will land on the homepage and from there they will be able to navigate anywhere. 
+
+                We have chosen to use a clique structure because we believe this increases the ease of use for the user when perusing the site. 
+                They will not need to have multiple tabs open or return to the previous page for any reason, this will make the experience more seamless. 
+                </p>
+    </div>
+    <div class="textbox">
+        <h2>Page Layout and Appearance</h2>
+        <p>For our website we will use the same header and footer for every page as seen below. 
+        </p>
+        <img src="./img/pagelayout.png" alt="Page Layout" width="500" height="250" class="navstruc">
+        <p>
+            Font: Karantina, 63px (logo “Mamma Mia”), 40px (logo “Pizzeria Trondheim”), 48px (navbar), 25px (footer). Font Roboto will also be used for general text in the website.
+            Colors: Red (#D36D6D), Green (#7CB288), Gray (#B7B7B7), Beige (#FAE6DC), White (#ffffff), Black (#000000)
+        </p>
+        <p>
+            The Navbar will be in the top right of the page, and may be reduced to a hamburger menu if space is limited. 
+            A small red line will appear under the current page you are in on the navbar and when hovering your mouse over the other options in the navbar the text will change to a slightly different color to indicate that you are about to select that page.
+
+        </p>
+
+
+
+    </div>
+    <div class="textbox">
+        <h2>Content</h2>
+        <h4>Homepage:</h4>
+        <p>The home page will be the first page the user sees. 
+            It will not throw too much information on the user, only a background picture for aesthetics, and two buttons: one for the menu and one for booking a table. 
+            This makes it easy for the user to access the most important and most regularly used parts of the website, and increases the chance of someone booking a table.
+        </p>
+        <img src="./img/contentlayout.png" alt="Content Layout" width="500" height="350" class="navstruc">
+        <h4>Menu:</h4>
+        <p>
+            Menu will present the user with the menu divided into categories. FIrst in terms of food and drinks, then into more specific categories. 
+            Each dish will have a short but precise description about the dish under the name, as well as the price and allergy information. 
+            The allergy information will at first be compressed into the letter “A”, but can be expanded with more information by hovering over the letter. 
+        </p>
+        <p>
+            In terms of the layout of the different dishes, it will be responsive in terms of the window size. 
+            The different sections should compress into smaller format, for example instead of them sitting side by side, they will transform into a horizontal layout where you scroll through every subsection at a time.
+        </p>
+        <img src="./img/menulayout.png" alt="Menu Layout" width="500" height="350" class="navstruc">
+
+        <h4>Booking (Book a Table):</h4>
+        <p>
+            The booking page will first present the user with a calendar where they can select which date they would like to book a table for. 
+            In the same screen you will also select how many guests you expect to be. 
+            After choosing the preferred date and amount of guests a new field will appear showing which timeslots are available and prompting the user to select which one they prefer.
+        </p>
+        <img src="./img/bookinglayout.png" alt="Booking Layout" width="500" height="350" class="navstruc">
+        <p>
+            The booking table needs to be relatively compact but at the same time be accessible to read for all ages. 
+            An approximate size would be around 70% height and 50% width.
+        </p>
+        <h4>About us:</h4>
+        <p>
+            The page will contain the story behind the restaurant, how it came to be, who is behind it, etc. 
+            Since our client is imaginary we will flex our creative muscles to make up a story to fill this page. 
+            It will contain text and images to describe what the founders of the restaurant have gone through, what their ambitions and goals are, and their values.
+        </p>
+        <p>
+            This page will contain an image slideshow to show the various dishes offered, and other relevant images of the restaurant.
+        </p>
+        <img src="./img/aboutuslayout.png" alt="About Us Layout" width="500" height="350" class="navstruc">
+
+        <h4>Find us:</h4>
+        <p>
+            This page will contain information on how to contact the restaurant and where to find it. 
+            This includes email, address, phone number, and also a map of the city which we might make interactive. 
+            The purpose of this page is to give the user the necessary information to locate and contact the restaurant.
+        </p>
+        <img src="./img/finduslayout.png" alt="Find Us Layout" width="500" height="350" class="navstruc">
+
+
+
+
+    </div>
+
+    <div class="textbox">
+        <h2>Minimum requirements:</h2>
+            <p>JavaScript apps suggestions:
+                <li>Interactive menu</li>
+                <li>Hamburger menu (mobile)</li>
+                <li>Contact form</li>
+                <li>Booking system for tables</li>
+                    <ul>
+                        <li>Calendar - Date</li>
+                        <li>How many guests</li>
+                        <li>Time</li>
+                    </ul>
+                <li>Photo carousel/random</li>
+                <li>Interactive map (find us)</li>
+                <li>Misc. animations</li>
+
+                <li>Image Slideshow:</li>
+                    <ul><li>Create a simple JavaScript image slideshow on the about us page that displays images of your restaurant, and some of the menu items. 
+                        Images can automatically transition or allow users to click through them.
+                    </li></ul>
+                <li>Menu Item Hover for Allergens:</li>
+                <ul><li>Implement a JavaScript script that allows users to hover over menu items to view allergen information. 
+                    This feature enhances the user experience by providing crucial allergen details.
+                </li></ul>
+                <li>Reservation Form Validation:</li>
+                <ul><li>Add form validation to the reservation form using JavaScript. 
+                    Ensure that users provide valid data, such as a correct email format and a minimum party size, before they can submit their reservation request. 
+                    This reduces errors and enhances the reservation process.
+                </li></ul>
+                <li>Email Subscription Pop-Up:</li>
+                <ul><li>Implement a pop-up alert on your restaurant website to greet visitors and request their email address. 
+                    This simple JavaScript function provides a non-intrusive way to engage with your audience and collect email subscriptions.
+                </li></ul>
+
+              
+            </p>
+    </div>
+<div class="textbox">
+    <h2>Plan:</h2>
+    <li>home.html</li>
+    <li>menu.html</li>
+    <li>about_us.html</li>
+    <li>booking.html</li>
+    <li>find_us.html</li>
+    <li>images/</li>
+    <ul>
+        <li>Logo.png</li>
+        <li>Img1.png</li>
+        <li>...</li>
+    </ul>
+    <li>scripts/</li>
+    <ul>
+        <li>imageSlideshow.js</li>
+        <li>allergenInfo.js</li>
+        <li>reservationValidation.js</li>
+        <li>emailSubscription.js</li>
+    </ul>
+    <li>styling.css</li>
+
+
+</div>
+<div class="textbox">
+    <table>
+        <tr class="tr">
+            <th>Filename</th>
+            <th>Description</th>
+            <th>In Charge</th>
+            <th>Deadline</th>
+        </tr>
+        <tr>
+            <td>home.html</td>
+            <td>The home page</td>
+            <td>Erik</td>
+            <td>05.11.2023</td>
+        </tr>
+        <tr>
+            <td>menu.html</td>
+            <td>Page for the menu</td>
+            <td>Morten</td>
+            <td>05.11.2023</td>
+        </tr>
+        <tr>
+            <td>booking.html</td>
+            <td>Page for reserving a table</td>
+            <td>Sebastian</td>
+            <td>05.11.2023</td>
+        </tr>
+        <tr>
+            <td>about_us.html</td>
+            <td>Page with general info about the restaurant</td>
+            <td>Lasse</td>
+            <td>05.11.2023</td>
+        </tr>
+        <tr>
+            <td>find_us.html</td>
+            <td>Page with information about where the restaurant is located</td>
+            <td>Johannes</td>
+            <td>05.11.2023</td>
+        </tr>
+        <tr>
+            <td>imageSlideshow.js</td>
+            <td>Slideshow of images </td>
+            <td>Lasse & Johannes</td>
+            <td>15.11.2023</td>
+        </tr>
+        <tr>
+            <td>allergenInfo.js</td>
+            <td>Allows user to hover on menu items to see info about allergenes</td>
+            <td>Morten</td>
+            <td>15.11.2023</td>
+        </tr>
+        <tr>
+            <td>reservationValidation.js</td>
+            <td>Checks that the user input is valid</td>
+            <td>Sebastian</td>
+            <td>15.11.2023</td>
+        </tr>
+        <tr>
+            <td>emailSubscription.js</td>
+            <td>Implement a pop-up alert on our restaurant website to greet visitors and request their email address for subscription</td>
+            <td>Erik</td>
+            <td>15.11.2023</td>
+        </tr>
+        <tr>
+            <td>styling.css</td>
+            <td>Styling</td>
+            <td>All</td>
+            <td>15.11.2023</td>
+        </tr>
+    </table>
+</div>
