@@ -99,10 +99,20 @@ body{
     color: #878787;
 }
 
-h2, h3, h4, p{
+#menu_content h2, h3, h4, p, h5{
     display: inline-block;
     margin: 0;
     padding: 0;
+}
+
+.menu_item h5{
+    color: #D36D6D;
+    font-size: 30px;
+    float: right;
+}
+
+#menu_content > div > div > h2{
+    padding: 2rem 0 2rem 0;
 }
 
 
