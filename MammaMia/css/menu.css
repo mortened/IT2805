@@ -1,0 +1,108 @@
+body{
+    min-height: 100vh;
+}
+
+.header{
+    height: 120px;
+    background-color: #9dcf8f;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header > h1{
+    margin-left: 15vw;
+    color: #ffff;
+}
+
+#menu{
+    margin: 0 0 0 15vw;
+    
+}
+
+#menu_sidebar{
+    width: 20vw;
+    float: left;
+    position: sticky;
+    top: 0;
+    font-size: 30px;
+}
+
+#menu_sidebar ul{
+    line-height: 60px;
+    list-style-type: none;
+}
+
+
+#menu_sidebar > ul{
+    padding: 0;
+}
+
+#menu_content{
+    width: 62vw;
+    float: right;
+}
+
+#menu_food, #menu_drinks{
+    margin: auto;
+}
+
+#menu_content h2{
+    font-size: 45px;
+    margin: 20px 0;
+}
+
+.menu_item h3, h4{
+    font-size: 32px;
+}
+
+.menu_item h3{
+    width: fit-content;
+}
+
+.menu_item{
+    padding: 1em;
+    box-sizing: border-box;
+    height: 150px;
+    width: 300px;
+    background-color: rgba(250, 230, 220, 0.7);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.menu_item p{
+    font-size: 25px;
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+.menu_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+#menu_sidebar a{
+    text-decoration: none;
+}
+
+#menu_sidebar a:visited{
+    color: #000;
+}
+
+#menu_sidebar a:hover{
+    cursor: pointer;
+}
+
+.menu_item h4{
+    float: right;
+    color: #878787;
+}
+
+h2, h3, h4, p{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+
