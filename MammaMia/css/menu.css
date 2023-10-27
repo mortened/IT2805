@@ -115,4 +115,15 @@ body{
     padding: 2rem 0 2rem 0;
 }
 
+.menu_item h5:hover{
+    cursor:pointer;
+    background-color:#D36D6D;
+    color: #fff;
+}
+
+.menu_item h5{
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
 
