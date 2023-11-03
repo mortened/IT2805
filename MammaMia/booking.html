@@ -8,11 +8,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karantina&family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/booking.css">
 </head>
 <body>
     <iframe src="components/nav.html" frameborder="0"></iframe>
-    <div>
+    <div class="header">
         <h1>Booking</h1>
+    </div>
+    <div class="wrapper">
+        <div class="headline">
+            <h2>Book a Table</h2>
+        </div>
+        <div class="form">
+            <form autocomplete="off">
+                <p>* Required Fields</p>
+                
+                <label for="booker-name">Your Full Name *</label><br>
+                <input type="text" name="booker-name" id="booker-name" placeholder="John Smith" required><br><br>
+
+                <label for="booker-email">Your E-mail *</label><br>
+                <input type="email" name="booker-email" id="booker-email" placeholder="john.smith@email.com" required><br><br>
+
+                <label for="booker-phone">Your Phone Number</label><br>
+                <input type="tel" name="booker-phone" id="booker-phone" placeholder="12345678" maxlength="8"><br><br>
+
+                <label for="booking-party-size">Party Size *</label><br>
+                <input type="number" name="booking-party-size" id="booking-party-size" min="1" max="10" required><br><br>
+
+                <label for="booking-date">Date of Your Visit *</label><br>
+                <input type="date" name="booking-date" id="booking-date" min="2023-11-03" value="2023-11-03" required><br><br>
+
+                <label for="booking-time">Preferred Time *</label><br>
+                <input type="time" name="booking-time" id="booking-time" min="16:00" max="23:00" required><br><br><br>
+
+                <input type="submit" id="book-table-submission-button" value="Book Table">
+            </form>
+        </div>
     </div>
     <iframe id="footer-comp" src="components/footer.html" frameborder="0"></iframe>
 </body>
