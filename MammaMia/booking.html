@@ -19,29 +19,45 @@
         <div class="headline">
             <h2>Book a Table</h2>
         </div>
+        <div class="confirmation-message">
+            <p>Your reservation is registered. Thank you for dining with us!</p>
+        </div>
         <div class="form">
-            <form autocomplete="off">
-                <p>* Required Fields</p>
-                
-                <label for="booker-name">Your Full Name *</label><br>
-                <input type="text" name="booker-name" id="booker-name" placeholder="John Smith" required><br><br>
+            <form autocomplete="off">                
+                <label for="booker-name">Full Name</label><br>
+                <input type="text" name="booker-name" id="booker-name" placeholder="John Smith" required oninvalid="this.setCustomValidity('We need your name')" value="John"><br><br>
 
-                <label for="booker-email">Your E-mail *</label><br>
-                <input type="email" name="booker-email" id="booker-email" placeholder="john.smith@email.com" required><br><br>
+                <label for="booker-email">E-mail</label><br>
+                <input type="email" name="booker-email" id="booker-email" placeholder="john.smith@email.com" required oninvalid="this.setCustomValidity('We need a valid e-mail to contact you')" value="john@email.com"><br><br>
 
-                <label for="booker-phone">Your Phone Number</label><br>
-                <input type="tel" name="booker-phone" id="booker-phone" placeholder="12345678" maxlength="8"><br><br>
+                <label for="booker-phone">Phone Number (Optional)</label><br>
+                <input type="tel" name="booker-phone" id="booker-phone" maxlength="8"><br><br>
 
-                <label for="booking-party-size">Party Size *</label><br>
-                <input type="number" name="booking-party-size" id="booking-party-size" min="1" max="10" required><br><br>
+                <label for="booking-party-size">Party Size</label><br>
+                <select name="booking-party-size" id="booking-party-size">
+                    <option disabled selected>For parties over 10, please contact us directly</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select><br><br>
 
-                <label for="booking-date">Date of Your Visit *</label><br>
+                <label for="booking-date">Date of Your Visit</label><br>
                 <input type="date" name="booking-date" id="booking-date" min="2023-11-03" value="2023-11-03" required><br><br>
+                <!-- Lage currentdate med js -->
 
-                <label for="booking-time">Preferred Time *</label><br>
-                <input type="time" name="booking-time" id="booking-time" min="16:00" max="23:00" required><br><br><br>
+                <label for="booking-time">Preferred Time</label><br>
+                <input type="time" name="booking-time" id="booking-time" min="16:00" max="23:00" step="1800" required oninvalid="this.setCustomValidity('Choose a time within opening hours (16-23) with a 30 minute interval')" value="16:00"><br><br><br>
+                <!-- Lage tid selector -->
 
                 <input type="submit" id="book-table-submission-button" value="Book Table">
+                <!-- Endre til reset -->
             </form>
         </div>
     </div>

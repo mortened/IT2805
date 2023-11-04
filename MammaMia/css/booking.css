@@ -1,4 +1,5 @@
 body {
+    font-family: 'Karantina', Arial, sans-serif;
     min-height: 100vh;
 }
 
@@ -15,16 +16,21 @@ body {
     color: #ffff;
 }
 
+.headline > h2 {
+    font-size: 30px;
+}
+
 .form {
-    /* justify-content: center; */
     text-align: left;
-    /* padding: 0px 3%; */
     background-color: #ffffff;
-    /* width: 50%; */
     margin: 30px 30% 200px 30%;
 }
 
-form > input {
+form > label {
+    font-size: 18px;
+}
+
+form > input, #booking-party-size {
     border-radius: 0px;
     border: none;
     border-bottom: solid black 1px;
@@ -32,6 +38,19 @@ form > input {
     width: 100%;
     height: 22px;
     outline: none;
+    font-family: Arial, sans-serif;
+}
+
+#booking-party-size {
+    cursor: pointer;
+}
+
+#booking-party-size:hover, #booking-party-size:focus {
+    border: none;
+    border-bottom: solid #D36D6D 3px;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    /* margin-bottom: 1px; */
 }
 
 form > input:hover, form > input:focus {
@@ -52,15 +71,35 @@ form > input:hover, form > input:focus {
     border: none;
     border-radius: 3px;
     height: 30px;
+    font-family: 'Karantina', Arial, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
 }
 
 #book-table-submission-button:hover {
+    border: #ae3f3f solid 2px;
+}
+
+#book-table-submission-button:active {
     background-color: #ae3f3f;
+}
+
+#booking-date, #booking-time {
+    cursor: text;
+}
+
+.confirmation-message {
+    background-color: #efffea;
+    margin: 0px 30%;
+    height: 40px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    border: solid #9dcf8f 4px;
+    border-radius: 3px;
 }
 
 @media screen and (max-width: 600px) {
     .form {
         min-width: 230px;
-        /* text-align: center; */
     }
 }
