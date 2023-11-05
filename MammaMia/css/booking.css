@@ -20,40 +20,41 @@ body {
     font-size: 30px;
 }
 
-.form {
+.container {
     text-align: left;
     background-color: #ffffff;
-    margin: 30px 30% 200px 30%;
+    margin: 30px auto 0 auto;
+    width: 40%;
 }
 
 form > label {
     font-size: 18px;
 }
 
-form > input, #booking-party-size {
-    border-radius: 0px;
+.data-input, 
+#book-table-submission-button {
     border: none;
     border-bottom: solid black 1px;
-    margin: 3px 0px;
+    margin: 3px 0;
     width: 100%;
     height: 22px;
     outline: none;
     font-family: Arial, sans-serif;
 }
 
-#booking-party-size {
-    cursor: pointer;
-}
-
-#booking-party-size:hover, #booking-party-size:focus {
+#booking-party-size:hover, 
+#booking-party-size:focus, 
+#booking-time:hover, 
+#booking-time:focus {
     border: none;
     border-bottom: solid #D36D6D 3px;
-    background-color: #f7f7f7;
     border-radius: 3px;
-    /* margin-bottom: 1px; */
+    background-color: #f7f7f7;
+    margin-top: 5px;
 }
 
-form > input:hover, form > input:focus {
+.data-input:hover,
+.data-input:focus {
     border: none;
     border-bottom: solid #D36D6D 3px;
     background-color: #f7f7f7;
@@ -73,7 +74,7 @@ form > input:hover, form > input:focus {
     height: 30px;
     font-family: 'Karantina', Arial, sans-serif;
     font-size: 20px;
-    cursor: pointer;
+    margin: 0;
 }
 
 #book-table-submission-button:hover {
@@ -84,22 +85,36 @@ form > input:hover, form > input:focus {
     background-color: #ae3f3f;
 }
 
-#booking-date, #booking-time {
-    cursor: text;
-}
-
-.confirmation-message {
+#confirmation-message {
     background-color: #efffea;
+    padding: 0 15px;
     margin: 0px 30%;
-    height: 40px;
     font-family: Arial, sans-serif;
     font-size: 15px;
     border: solid #9dcf8f 4px;
     border-radius: 3px;
+    display: none;
+}
+
+#notes {
+    color: #c0c0c0;
+    margin: 0 auto 100px auto;
+}
+
+.cursor-text {
+    cursor: text;
+}
+
+.cursor-pointer {
+    cursor: pointer;
 }
 
 @media screen and (max-width: 600px) {
     .form {
+        min-width: 230px;
+    }
+
+    #notes {
         min-width: 230px;
     }
 }
