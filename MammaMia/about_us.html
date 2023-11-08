@@ -26,9 +26,15 @@
             <img src="./images/Slideshow/restaurantSS.jpeg" alt="Image 3" width="500" height="300" style="border-radius: 10px;">
           </div>
     </div>
-    <button class="button" id="prevBtn" onclick="plusSlides(-1)">&#8249;</button>
-    <button class="button" id="nextBtn" onclick="plusSlides(1)">&#8250;</button>
+    <button class="button" id="prevBtn" onclick="plusSlides(-1)">&#8249;--</button>
+    <button class="button" id="nextBtn" onclick="plusSlides(1)">--&#8250;</button>
   
+    <div class="indicator_div">
+        <div class="indicator" onclick="currentSlide(0)"></div>
+        <div class="indicator" onclick="currentSlide(1)"></div>
+        <div class="indicator" onclick="currentSlide(2)"></div>
+      </div>
+
     <br><br>
     <div id="headline">
         <h3 id="h3">Our Story</h3>

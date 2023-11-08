@@ -1,6 +1,9 @@
 let slideIndex = 0;
 const slides = document.querySelectorAll('.slide');
 
+const indicators = document.querySelectorAll('.indicator');
+
+
 function showSlide(n) {
   if (n < 0) {
     slideIndex = slides.length - 1;
@@ -12,9 +15,11 @@ function showSlide(n) {
 
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
+    indicators[i].style.opacity = 0.5;
   }
 
   slides[slideIndex].style.display = 'block';
+  indicators[slideIndex].style.opacity = 1;
 }
 
 function plusSlides(n) {
@@ -28,3 +33,8 @@ setInterval(function () {
 
 //shows the first slide
 showSlide(slideIndex);
+
+//pressing the indicators will swap to that picture
+function currentSlide(n){
+  showSlide(n)
+}
