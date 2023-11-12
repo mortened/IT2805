@@ -12,7 +12,7 @@ function showSlide(n) {
     slideIndex = n;
   }
 
-  /*
+  
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
     indicators[i].style.opacity = 0.5;
@@ -21,7 +21,6 @@ function showSlide(n) {
 
   slides[slideIndex].style.display = 'block';
   indicators[slideIndex].style.opacity = 1;
-  */
 
   posLeft(transformIndex(slideIndex - 1));
   posRight(transformIndex(slideIndex + 1));
