@@ -1,3 +1,4 @@
+/* General page layout. */
 body {
     font-family: 'Karantina', Arial, sans-serif;
     min-height: 100vh;
@@ -16,23 +17,30 @@ body {
     color: #ffff;
 }
 
+/* Make the headline of the page an appropriate size. */
 .headline > h2 {
     font-size: 30px;
 }
 
+/* Align content in the center of the page. */
 .container {
+    text-align: center;
+}
+
+/* Align input labels to the left for aesthetic reasons, make the content adjustable with window size. */
+.wrapper {
     text-align: left;
-    background-color: #ffffff;
-    margin: 30px auto 0 auto;
+    margin: 30px auto 0;
     width: 40%;
 }
 
+/* Make the input labels an appropriate size. */
 form > label {
     font-size: 18px;
 }
 
-.data-input, 
-#book-table-submission-button {
+/* Make the input fields have an appropriate size and style. */
+.data-input {
     border: none;
     border-bottom: solid black 1px;
     margin: 3px 0;
@@ -42,6 +50,18 @@ form > label {
     font-family: Arial, sans-serif;
 }
 
+#book-table-submission-button {
+    background-color: #D36D6D;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    height: 30px;
+    font-family: 'Karantina', Arial, sans-serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+/* Change style of input fields when hovered over or selected. */
 #booking-party-size:hover, 
 #booking-party-size:focus, 
 #booking-time:hover, 
@@ -62,21 +82,6 @@ form > label {
     margin-bottom: 1px;
 }
 
-.wrapper {
-    text-align: center;
-}
-
-#book-table-submission-button {
-    background-color: #D36D6D;
-    color: #ffffff;
-    border: none;
-    border-radius: 3px;
-    height: 30px;
-    font-family: 'Karantina', Arial, sans-serif;
-    font-size: 20px;
-    margin: 0;
-}
-
 #book-table-submission-button:hover {
     border: #ae3f3f solid 2px;
 }
@@ -85,10 +90,11 @@ form > label {
     background-color: #ae3f3f;
 }
 
+/* Make the confirmation box have an appropriate size and style. */
 #confirmation-message {
     background-color: #efffea;
-    padding: 0 15px;
-    margin: 0px 30%;
+    margin: 0px auto;
+    width: 40%;
     font-family: Arial, sans-serif;
     font-size: 15px;
     border: solid #9dcf8f 4px;
@@ -96,11 +102,18 @@ form > label {
     display: none;
 }
 
-#notes {
-    color: #c0c0c0;
-    margin: 0 auto 100px auto;
+#confirmation-message > p {
+    margin: 15px;
 }
 
+/* Make the note at the bottom (for party size) have an appropriate style and placement on the page. */
+#notes {
+    color: #c0c0c0;
+    margin: 0 auto 100px;
+    
+}
+
+/* Make the cursor the appropriate type for each input field. */
 .cursor-text {
     cursor: text;
 }
@@ -109,12 +122,17 @@ form > label {
     cursor: pointer;
 }
 
+/* When the window is resized, do not make the content too small. */
 @media screen and (max-width: 600px) {
-    .form {
+    .wrapper {
         min-width: 230px;
     }
 
     #notes {
+        min-width: 230px;
+    }
+
+    #confirmation-message {
         min-width: 230px;
     }
 }

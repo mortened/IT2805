@@ -17,7 +17,7 @@ function confirmationValidation() {
 function getTodaysDate() {
     let date = new Date();
     let dd = date.getDate();
-    let mm = date.getMonth() + 1;
+    let mm = date.getMonth() + 1; // Add one because month is zero-indexed
     let yyyy = date.getFullYear();
 
     if (dd < 10) {dd = '0' + dd} // If the day is less than 10, add a 0 to the string for formatting

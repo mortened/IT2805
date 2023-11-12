@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Booking</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,14 +15,14 @@
     <div class="header">
         <h1>Booking</h1>
     </div>
-    <div class="wrapper">
+    <div class="container">
         <div class="headline">
             <h2>Book a Table</h2>
         </div>
         <div id="confirmation-message">
             <p>Your reservation is registered. Thank you for dining with us!</p>
         </div>
-        <div class="container">
+        <div class="wrapper">
             <form id="form" autocomplete="off">                
                 <label for="booker-name">Full Name</label><br>
                 <input type="text" name="booker-name" id="booker-name" class="data-input cursor-text" required><br><br>
@@ -67,10 +67,10 @@
                     <option value="22:00">22:00</option>
                 </select><br><br>
 
-                <input type="submit" id="book-table-submission-button" class="cursor-pointer" value="Book Table" onclick="confirmationValidation()">
+                <input type="submit" id="book-table-submission-button" class="data-input cursor-pointer" value="Book Table" onclick="confirmationValidation()">
             </form>
         </div>
-        <div class="container" id="notes">
+        <div class="wrapper" id="notes">
             <p>* For parties over 10, please contact us directly</p>
         </div>
     </div>
