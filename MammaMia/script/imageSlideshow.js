@@ -4,6 +4,7 @@ const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
 
 function showSlide(n) {
+  //Checks which photo is to be shown
   if (n < 0) {
     slideIndex = slides.length - 1;
   } else if (n >= slides.length) {
@@ -12,13 +13,13 @@ function showSlide(n) {
     slideIndex = n;
   }
 
-  
+  //Removes the "old" picture shown, disables the indicator
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = 'none';
     indicators[i].style.opacity = 0.5;
   }
 
-
+  //Shows the current photo and indicator
   slides[slideIndex].style.display = 'block';
   indicators[slideIndex].style.opacity = 1;
 
