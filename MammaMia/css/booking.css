@@ -19,7 +19,7 @@ body {
 
 /* Make the headline of the page an appropriate size. */
 .headline > h2 {
-    font-size: 30px;
+    font-size: 35px;
 }
 
 /* Align content in the center of the page. */
@@ -31,12 +31,12 @@ body {
 .wrapper {
     text-align: left;
     margin: 30px auto 0;
-    width: 40%;
+    width: 50%;
 }
 
 /* Make the input labels an appropriate size. */
 form > label {
-    font-size: 18px;
+    font-size: 25px;
 }
 
 /* Make the input fields have an appropriate size and style. */
@@ -45,9 +45,10 @@ form > label {
     border-bottom: solid black 1px;
     margin: 3px 0;
     width: 100%;
-    height: 22px;
+    height: 27px;
     outline: none;
     font-family: Arial, sans-serif;
+    font-size: 15px;
 }
 
 #book-table-submission-button {
@@ -55,9 +56,9 @@ form > label {
     color: #ffffff;
     border: none;
     border-radius: 3px;
-    height: 30px;
+    height: 35px;
     font-family: 'Karantina', Arial, sans-serif;
-    font-size: 20px;
+    font-size: 25px;
     margin: 0;
 }
 
@@ -94,9 +95,9 @@ form > label {
 #confirmation-message {
     background-color: #efffea;
     margin: 0px auto;
-    width: 40%;
+    width: 50%;
     font-family: Arial, sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     border: solid #9dcf8f 4px;
     border-radius: 3px;
     display: none;
@@ -106,11 +107,11 @@ form > label {
     margin: 15px;
 }
 
-/* Make the note at the bottom (for party size) have an appropriate style and placement on the page. */
-#notes {
+/* Make notes in the page have an appropriate style and placement on the page. */
+.notes {
     color: #c0c0c0;
     margin: 0 auto 100px;
-    
+    font-size: 20px;
 }
 
 /* Make the cursor the appropriate type for each input field. */
