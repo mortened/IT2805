@@ -2,6 +2,7 @@ body {
     font-family: 'Karantina', Arial, sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 footer {
@@ -12,14 +13,13 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 99%;
-
+    width: 100%;   
 }
 
 footer a {
     color: black;
     text-decoration: none;
-    font-size: 35px;
+    font-size: min(2.2vw, 35px);
     padding: 20px;
 }
 
@@ -30,4 +30,18 @@ footer a:hover {
 footer a img {
     height: 20px;
     padding-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer a {
+        padding: 0;
+        font-size: 3vw;
+    }
+    footer a img {
+        height: 2.5vw;
+    }  
 }
