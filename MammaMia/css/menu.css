@@ -17,7 +17,7 @@ body{
 
 #menu{
     margin: 0 0 0 15vw;
-    
+    padding: 0 0 50px 0;
 }
 
 #menu_sidebar{
@@ -41,10 +41,25 @@ body{
 #menu_content{
     width: 62vw;
     float: right;
+    margin: 3vh 0 0 0;
 }
 
 #menu_food, #menu_drinks{
     margin: auto;
+}
+
+#menu_food > p{
+    color: #878787;
+    font-size: 30px;
+    padding: 10px 0 20px 0;
+}
+
+#menu_drinks{
+    margin-top: 3vh;
+}
+
+#menu_content > div >h2{
+    border-bottom:2px solid #D36D6D;
 }
 
 #menu_content h2{
@@ -92,6 +107,7 @@ body{
 
 #menu_sidebar a:hover{
     cursor: pointer;
+    color: #D36D6D;
 }
 
 .menu_item h4{
@@ -127,3 +143,30 @@ body{
     background-color: #fff;
 }
 
+@media screen and (max-width: 1016px){
+    #menu{
+        margin: 0 0 0 5vw;
+    }
+    #menu_content{
+        width: 70vw;
+    }
+    
+}
+
+@media screen and (max-width: 992px){
+    #menu_sidebar{
+        display: none;
+    }
+    .menu_item{
+        width: 330px;
+    }
+    #menu_content{
+        width: 90vw;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .menu_item{
+        width: 300px;
+    }
+}

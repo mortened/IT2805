@@ -4,7 +4,6 @@ const allergyDict = {
     fried_calamari: ["Gluten"],
     garlic_knots: ["Gluten"],
     caesar_salad: ["Dairy", "Gluten"],
-    garden_salad: ["none"],
     arugula_and_prosciutto: ["Dairy"],
     margherita: ["Dairy", "Gluten"],
     pepperoni: ["Dairy", "Gluten"],
@@ -38,8 +37,10 @@ for (let i = 0; i < allergyTags.length; i++) {
         hideAllergyInfo();
         if (allergyDict.hasOwnProperty(element.id)) {
             console.log(allergyDict[element.id]);
-            const X = event.clientX + window.scrollX
-            const Y = event.clientY + window.scrollY
+            //Postion of the element relative to the viewport
+            const elementRect = element.getBoundingClientRect();
+            const X = elementRect.left + window.scrollX;
+            const Y = elementRect.top + window.scrollY;
             console.log(X,Y);
             displayAllergyInfo(element.id, X, Y)
         }
@@ -63,31 +64,55 @@ function displayAllergyInfo(menuItem, X, Y) {
         allergyDiv.style.height = "fit-content";
         allergyDiv.style.padding = "10px";
         allergyDiv.style.backgroundColor = "#D36D6D";
-        allergyDiv.style.color = "#fff";
+        allergyDiv.style.color = "#FFFFFF";
         allergyDiv.style.borderRadius = "10px";
 
-        const allergyHeading = document.createElement("h1");
-        allergyHeading.style.margin = "0";
+        const allergyHeading = document.createElement("p");
+        allergyHeading.style.fontSize = "35px";
         allergyHeading.textContent = "Allergies";
         allergyDiv.appendChild(allergyHeading);
 
+        const closeX = document.createElement("h1");
+        closeX.textContent = "x";
+        closeX.style.margin = "0";
+        closeX.style.fontSize = "20px";
+        closeX.style.float = "right";
+        closeX.style.cursor = "pointer";
+        closeX.style.color = "black";
+        closeX.style.width = "30px"
+        closeX.style.height = "30px"
+        closeX.style.textAlign = "right";
+        closeX.style.marginTop = "-10px";
+        
+        allergyDiv.appendChild(closeX);
+        closeX.addEventListener("click", function(event) {
+            event.stopPropagation();
+            hideAllergyInfo();
+        });
+
+
         const allergies = allergyDict[menuItem];
         const allergyList = document.createElement("ul");
-        allergyList.style.listStyleType = "none";
-        allergyList.style.padding = "0";
-        allergyList.style.margin = "0";
+        allergyList.style.margin = "10px 0 10px 0";
         allergyDiv.appendChild(allergyList);
         allergies.forEach(allergy => {
             const listItem = document.createElement("li");
-            const listItemText = document.createElement("h2");
+            listItem.style.fontSize = "30px";
+            // const listItemText = document.createElement("p");
+            // listItemText.style.margin = "10px 0 10px 0";
+            // listItemText.style.width = "fit-content";
+            // listItemText.style.fontSize = "30px";
+            // listItemText.style.float = "left";
             const allergyIcon = document.createElement("img");
             allergyIcon.src = "images/" + allergy + ".svg";
-            allergyIcon.style.width = "50px";
-            allergyIcon.style.height = "50px";
+            allergyIcon.style.width = "30px";
+            allergyIcon.style.height = "30px";
             allergyIcon.style.float = "right";
-            allergyDiv.appendChild(allergyIcon);
-            listItemText.textContent = allergy;
-            listItem.appendChild(listItemText);
+            // allergyDiv.appendChild(allergyIcon);
+            listItem.appendChild(allergyIcon);
+            listItem.textContent = allergy;
+            // listItemText.textContent = allergy;
+            // listItem.appendChild(listItemText);
             allergyList.appendChild(listItem);
         });
 
@@ -104,3 +129,4 @@ function hideAllergyInfo(){
         allergyDiv.remove();
     }
 }
+
