@@ -37,7 +37,6 @@ for (let i = 0; i < allergyTags.length; i++) {
         hideAllergyInfo();
         if (allergyDict.hasOwnProperty(element.id)) {
             console.log(allergyDict[element.id]);
-            //Postion of the element relative to the viewport
             const elementRect = element.getBoundingClientRect();
             const X = elementRect.left + window.scrollX;
             const Y = elementRect.top + window.scrollY;
@@ -98,21 +97,7 @@ function displayAllergyInfo(menuItem, X, Y) {
         allergies.forEach(allergy => {
             const listItem = document.createElement("li");
             listItem.style.fontSize = "30px";
-            // const listItemText = document.createElement("p");
-            // listItemText.style.margin = "10px 0 10px 0";
-            // listItemText.style.width = "fit-content";
-            // listItemText.style.fontSize = "30px";
-            // listItemText.style.float = "left";
-            const allergyIcon = document.createElement("img");
-            allergyIcon.src = "images/" + allergy + ".svg";
-            allergyIcon.style.width = "30px";
-            allergyIcon.style.height = "30px";
-            allergyIcon.style.float = "right";
-            // allergyDiv.appendChild(allergyIcon);
-            listItem.appendChild(allergyIcon);
             listItem.textContent = allergy;
-            // listItemText.textContent = allergy;
-            // listItem.appendChild(listItemText);
             allergyList.appendChild(listItem);
         });
 
