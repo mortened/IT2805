@@ -23,6 +23,7 @@ function showSlide(n) {
   slides[slideIndex].style.display = 'block';
   indicators[slideIndex].style.opacity = 1;
 
+  //Transforms the current position into the new one when changing the 'active' photo
   posLeft(transformIndex(slideIndex - 1));
   posRight(transformIndex(slideIndex + 1));
   posMiddle(slideIndex);
@@ -48,6 +49,7 @@ function currentSlide(n){
 }
 
 
+//Displays the middle photo, considered the current photo
 function posMiddle(slide){
   slides[slide].style.transform = 'scale(1)';
   slides[slide].style.marginLeft = '35vw';
@@ -56,6 +58,7 @@ function posMiddle(slide){
   slides[slide].style.zIndex = '2';
 }
 
+//Left picture, slightly hidden behind the middle photo, uses CSS in JS to change the properties like position and size
 function posLeft(slide){
   slides[slide].style.transform = 'scale(0.75)';
   slides[slide].style.marginLeft = '30vw';
@@ -64,6 +67,7 @@ function posLeft(slide){
   slides[slide].style.zIndex = '1';
 }
 
+//Right picture, slightly hidden behind the middle photo, uses CSS in JS to change the properties like position and size
 function posRight(slide){
   slides[slide].style.transform = 'scale(0.75)';
   slides[slide].style.marginLeft = '40vw';
@@ -71,6 +75,7 @@ function posRight(slide){
   slides[slide].style.position = 'absolute';
   slides[slide].style.zIndex = '1';
 }
+
 
 function transformIndex(n){
   if (n < 0) {

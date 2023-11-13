@@ -1,3 +1,4 @@
+/*Small adjustments for */
 .header{
   height: 120px;
   background-color: #9dcf8f;
@@ -40,6 +41,7 @@
   border-radius: 0px;
 }
 
+/*Adjustments for the italian stripes*/
 .left {
   left: 50px;
   height: 100%;
@@ -63,6 +65,7 @@
 
 }
 
+/*Properties for the different parts of the webpage*/
 .textbox{
   margin: auto;
   padding: 0.5em;
@@ -93,10 +96,12 @@
   text-align: center;
 }
 
+/*Simple width for the Italian flags to keep their width*/
 img {
   width: 100%;
-
 }
+
+/*Button, both size and hover function*/
 .button {
   width: 60px;
   height: 40px;
@@ -112,6 +117,7 @@ img {
 
 }
 
+/*Properties for the indicator div and its indicators inside, shows which picture is active*/
 .indicator_div {
   text-align: center;
   margin-top: 10vw;
@@ -136,6 +142,7 @@ img {
   color: red;
 }
 
+/*Properties for each photo inside the slideshow (ss), adjusting the size*/
 .ss{
   width: 30vw;
   height: 23vw;
