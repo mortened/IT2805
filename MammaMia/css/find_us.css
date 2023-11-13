@@ -1,3 +1,4 @@
+/*styling of the header*/
 .header{
     height: 120px;
     background-color: #9dcf8f;
@@ -50,6 +51,7 @@ p {
     transition: color 0.1s;
 }
 
+/*When hovering over the address it gets lighter*/
 #map_link:hover > p {
     color: #656565;
 }
@@ -68,13 +70,13 @@ p {
     display: inline-block;
 }
 
+/*Styling  for the contact section*/
 #contact {
     flex: 1;
     display: inline-block;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-
 
 #contact_info {
     flex-wrap: wrap;
@@ -92,15 +94,18 @@ p {
     align-items: center;
 }
 
+/*When hovering over a specific contact link it gets lighter*/
 #contact_info a:hover {
     color: #656565;
 }
 
+/*Sets size of the contact icons*/
 #contact_info img {
     height: 30px;
     padding-right: 10px;
 }
 
+/*Change placement of the map when window gets too narrow*/
 @media (max-width: 800px) {
     #visit {
         display: block;
