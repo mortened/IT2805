@@ -77,6 +77,8 @@ function displayAllergyInfo(menuItem, X, Y) {
         //Create the allergy info
         const allergyHeading = document.createElement("p");
         allergyHeading.style.fontSize = "35px";
+        allergyHeading.style.margin = "0";
+        allergyHeading.style.width = "fit-content";
         allergyHeading.textContent = "Allergies";
         allergyDiv.appendChild(allergyHeading);
 
@@ -90,8 +92,10 @@ function displayAllergyInfo(menuItem, X, Y) {
         closeX.style.color = "black";
         closeX.style.width = "30px"
         closeX.style.height = "30px"
-        closeX.style.textAlign = "right";
-        closeX.style.marginTop = "-10px";
+        closeX.style.textAlign = "center";
+        closeX.style.position = "absolute";
+        closeX.style.top = "0";
+        closeX.style.right = "0";
         
         //Add the close button to the popup div
         allergyDiv.appendChild(closeX);

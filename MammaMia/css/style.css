@@ -321,7 +321,7 @@ footer a img {
     color: #878787;
 }
 
-#menu_content h2, #menu_content h3, #menu_content h4, #menu_content p, #menu_content h5{
+#menu_content h2, #menu_content h3, #menu_content h4, #menu_content p{
     display: inline-block;
     margin: 0;
     padding: 0;
@@ -331,6 +331,10 @@ footer a img {
     color: #D36D6D;
     font-size: 30px;
     float: right;
+    margin: 10px 0 0 0;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    background-color: #fff;
 }
 
 #menu_content > div > div > h2{
@@ -341,12 +345,6 @@ footer a img {
     cursor:pointer;
     background-color:#D36D6D;
     color: #fff;
-}
-
-.menu_item h5{
-    padding: 0 10px 0 10px;
-    border-radius: 10px;
-    background-color: #fff;
 }
 
 @media screen and (max-width: 1016px){
