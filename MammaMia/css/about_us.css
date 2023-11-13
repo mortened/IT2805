@@ -20,6 +20,7 @@
 #footer-comp{
   z-index: 2;
   border-radius: 0px;
+  border: 0;
 }
 
 .h3{
@@ -37,7 +38,6 @@
   top: 0;
   z-index: 1;
   border-radius: 0px;
-
 }
 
 .left {
@@ -56,16 +56,12 @@
 
 
 /*Hide Italian flags on phone screens, for better visibility*/
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .left, .right, .ita_stripes{
     display: none;
   }
-  #imageSS{
-    margin-left: 0;
-    width: 30%;
-  }
-}
 
+}
 
 .textbox{
   margin: auto;
@@ -77,25 +73,26 @@
   border-radius: 10px;
   display: inline-block;
   font-size: 35px;
+  margin-bottom: 10px;
 }
-
 
 #imageSlideshow {
   position: relative;
-  max-width: 800px;
-  width: 90%;
-  height: 350px;
+  width: 100vw;
+  height: 15vw;
   margin: auto;
   margin-top: 10px;
   display: block;
-  border: #f00;
 }
+
 .slide {
-  width: 60%;
+  width: 30vw;
   margin: auto;
-  position: absolute;
+  position: relative;
   transition-duration: 400ms;
+  text-align: center;
 }
+
 img {
   width: 100%;
 
@@ -115,9 +112,9 @@ img {
 
 }
 
-
 .indicator_div {
   text-align: center;
+  margin-top: 10vw;
 }
 
 .indicator {
@@ -140,7 +137,9 @@ img {
 }
 
 .ss{
-  width: 500px;
-  height: 300px;
+  width: 30vw;
+  height: 23vw;
   border-radius: 10px;
+  text-align: center;
+
 }

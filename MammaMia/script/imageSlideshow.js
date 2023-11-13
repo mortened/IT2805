@@ -26,6 +26,7 @@ function showSlide(n) {
   posLeft(transformIndex(slideIndex - 1));
   posRight(transformIndex(slideIndex + 1));
   posMiddle(slideIndex);
+  
 }
 
 function plusSlides(n) {
@@ -46,9 +47,10 @@ function currentSlide(n){
   showSlide(n)
 }
 
+
 function posMiddle(slide){
   slides[slide].style.transform = 'scale(1)';
-  slides[slide].style.marginLeft = '20%';
+  slides[slide].style.marginLeft = '35vw';
   slides[slide].style.display = 'inline-block';
   slides[slide].style.position = 'absolute';
   slides[slide].style.zIndex = '2';
@@ -56,7 +58,7 @@ function posMiddle(slide){
 
 function posLeft(slide){
   slides[slide].style.transform = 'scale(0.75)';
-  slides[slide].style.marginLeft = '0%';
+  slides[slide].style.marginLeft = '30vw';
   slides[slide].style.display = 'inline-block';
   slides[slide].style.position = 'absolute';
   slides[slide].style.zIndex = '1';
@@ -64,7 +66,7 @@ function posLeft(slide){
 
 function posRight(slide){
   slides[slide].style.transform = 'scale(0.75)';
-  slides[slide].style.marginLeft = '40%';
+  slides[slide].style.marginLeft = '40vw';
   slides[slide].style.display = 'inline-block';
   slides[slide].style.position = 'absolute';
   slides[slide].style.zIndex = '1';
