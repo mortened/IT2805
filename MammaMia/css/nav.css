@@ -51,6 +51,7 @@ nav ul {
     display: flex;
     justify-content: space-between;
     width: 60vw;
+    padding-left: 0%;
 }
 
 @media screen and (max-width: 700px) {
