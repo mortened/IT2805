@@ -11,7 +11,7 @@
     color: #ffff;
 }
 
-h1{
+h2{
     margin-left: 15vw;
     color: #d36d6d;
     font-size: 50px;
@@ -30,7 +30,7 @@ h1{
     padding-bottom: 20px;
 }
 
-#visit_info > h2 {
+#visit_info > h3 {
     margin-left: 18vw;
     color: #000000;
     font-size: 45px;
