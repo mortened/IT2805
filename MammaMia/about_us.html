@@ -3,17 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>About us</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karantina&family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/about_us.css">
 </head>
 <body>
-    <iframe src="components/nav.html" frameborder="0"></iframe>
-    <div>
+    <iframe src="components/nav.html" class="iframe"></iframe>
+    <div class="header">
         <h1>About us</h1>
     </div>
-    <iframe id="footer-comp" src="components/footer.html" frameborder="0"></iframe>
+    <div id="imageSlideshow">
+        <div class="slide">
+            <img src="./images/Slideshow/pizzaSS_1.jpeg" class="ss" alt="Freshly baked Pizza">
+          </div>
+          <div class="slide">
+            <img src="./images/Slideshow/ovenSS.jpeg" class="ss" alt="Pizzas baking in the oven">
+          </div>
+          <div class="slide">
+            <img src="./images/Slideshow/restaurantSS.jpeg" class="ss" alt="Resturant seating">
+          </div>
+    </div>
+  
+    <div class="indicator_div">
+        <button class="button" id="prevBtn" onclick="plusSlides(-1)">&#8249;--</button>
+
+        <div class="indicator" onclick="currentSlide(0)"></div>
+        <div class="indicator" onclick="currentSlide(1)"></div>
+        <div class="indicator" onclick="currentSlide(2)"></div>
+
+        <button class="button" id="nextBtn" onclick="plusSlides(1)">--&#8250;</button>
+
+      </div>
+
+    <br><br>
+    <div class="headline">
+        <h3 class="h3">Our Story</h3>
+    </div>
+    <div class="line left">
+        <img src="./images/Slideshow/flag.png" class="ita_stripes" alt="Italian Flag">
+    </div>
+    <div class="textbox">
+        <p>
+            Welcome to our Mamma Mia pizzeria, where Italy's pizza-making tradition is our inspiration and passion. 
+            Our roots in Italy run deep, and we've brought that heritage to the heart of Trondheim. 
+            As a family-run establishment, we take immense pride in crafting each pizza with care and the finest, locally sourced ingredients. 
+            We believe that every pizza should tell a story, and with each creation, we aim to take you on a journey through the flavors of Italy. 
+            Whether you savor a classic Margherita or an innovative creation, we're here to satisfy your pizza cravings. 
+            Join us in our warm and inviting atmosphere, and let us share our love for pizza with you. Buon appetito!
+        </p>
+    </div><br><br>
+    <div class="headline">
+        <h3 class="h3">Our Mission</h3>
+    </div>
+    <div class="textbox">
+        <p>
+            We long to import and create the most authentic Italian restaurant experience to the people of Trondheim. 
+            Through our many years of experience making the ever-popular Italian cuisine, we have developed and carefully selected our menu
+            to bring the Italian specialities to Trondheim.
+        </p>
+    </div>
+    <div class="line right">
+        <img src="./images/Slideshow/flag.png" class="ita_stripes" alt="Italian Flag">
+    </div>
+    <iframe id="footer-comp" src="components/footer.html"></iframe>
+    <script src="script/imageSlideshow.js"></script>
 </body>
 </html>

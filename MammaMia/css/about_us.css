@@ -1,0 +1,146 @@
+.header{
+  height: 120px;
+  background-color: #9dcf8f;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.header > h1{
+  margin-left: 15vw;
+  color: #ffff;
+}
+
+.iframe{
+  z-index: 2;
+  border: 0px;
+}
+
+#footer-comp{
+  z-index: 2;
+  border-radius: 0px;
+}
+
+.h3{
+  margin: auto;
+  color: green;
+  font-size: 40px;
+  width: 700px;
+
+}
+
+.line {
+  position: fixed;
+  height: 100%;
+  width: 30px;
+  top: 0;
+  z-index: 1;
+  border-radius: 0px;
+
+}
+
+.left {
+  left: 50px;
+  height: 100%;
+}
+
+.right {
+  right: 50px;
+  height: 100%;
+}
+
+.ita_stripes{
+  height: 100%;
+}
+
+
+/*Hide Italian flags on phone screens, for better visibility*/
+@media (max-width: 768px) {
+  .left, .right, .ita_stripes{
+    display: none;
+  }
+  #imageSS{
+    margin-left: 0;
+    width: 30%;
+  }
+}
+
+
+.textbox{
+  margin: auto;
+  padding: 0.5em;
+  box-sizing: border-box;
+  width: 700px;
+  max-width: 90%;
+  background-color: rgba(250, 230, 220, 0.7);
+  border-radius: 10px;
+  display: inline-block;
+  font-size: 35px;
+}
+
+
+#imageSlideshow {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  height: 350px;
+  margin: auto;
+  margin-top: 10px;
+  display: block;
+  border: #f00;
+}
+.slide {
+  width: 60%;
+  margin: auto;
+  position: absolute;
+  transition-duration: 400ms;
+}
+img {
+  width: 100%;
+
+}
+.button {
+  width: 60px;
+  height: 40px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+}
+
+.button:hover {
+  background-color: lightblue;
+  opacity: 70%;
+
+}
+
+
+.indicator_div {
+  text-align: center;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #888;
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.indicator.active {
+  background-color: #f00;
+}
+
+.indicator:hover{
+  color: red;
+}
+
+.ss{
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+}
