@@ -221,11 +221,12 @@ footer a img {
 
 /* Menu Start */
 
+/* Push content to the left and add space between menu and footer */
 #menu{
     margin: 0 0 0 15vw;
     padding: 0 0 50px 0;
 }
-/* Stick the sidebar to the left */
+/* Stick the sidebar to the left of the screen */
 #menu_sidebar{
     width: 20vw;
     float: left;
@@ -234,11 +235,13 @@ footer a img {
     font-size: 30px;
 }
 
+/* Vertical spacing and removal of bullet points from list sidebar */
 #menu_sidebar ul{
     line-height: 60px;
     list-style-type: none;
 }
 
+/* Remove preset left padding on the outer lists in sidebar */
 #menu_sidebar > ul{
     padding: 0;
 }
@@ -249,39 +252,48 @@ footer a img {
     margin: 3vh 0 0 0;
 }
 
-#menu_food, #menu_drinks{
-    margin: auto;
+/* For better control later */
+#menu_content h2, #menu_content h3, #menu_content h4, #menu_content p{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
 }
 
+/* Styling on info text about allergies */
 #menu_food > p{
     color: #878787;
     font-size: 30px;
     padding: 10px 0 20px 0;
 }
 
+
 #menu_drinks{
-    margin-top: 3vh;
+    margin-top: 5vh;
 }
 
+/* Headline of food and drinks menu have red underlines */
 #menu_content > div >h2{
     border-bottom:2px solid #D36D6D;
 }
 
 #menu_content h2{
     font-size: 45px;
-    margin: 20px 0;
 }
 
-.menu_item h3, h4{
+.menu_item h3, .menu_item h4{
     font-size: 32px;
-}
-
-.menu_item h3{
     width: fit-content;
 }
 
+/* Space around subheadings, i.e. pizzas, starters etc */
+#menu_content > div > div > h2{
+    padding: 2rem 0 2rem 0;
+}
+
+/* Styling an sizing of menu item boxes */
 .menu_item{
     padding: 1em;
+    /* Includes padding in sizing */
     box-sizing: border-box;
     height: 150px;
     width: 300px;
@@ -296,37 +308,32 @@ footer a img {
     width: 100%;
 }
 
+/* Ensures flexible placements of boxes with a set gap, wraps on next line */
 .menu_boxes{
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
 
+/* Removes preset link style */
 #menu_sidebar a{
     text-decoration: none;
     color: #000;
 }
 
-#menu_sidebar a:visited{
-    color: #000;
-}
-
+/* Hover effects on sidebar */
 #menu_sidebar a:hover{
     cursor: pointer;
     color: #D36D6D;
 }
 
+/* Price on right in grey */
 .menu_item h4{
     float: right;
     color: #878787;
 }
 
-#menu_content h2, #menu_content h3, #menu_content h4, #menu_content p{
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
+/* Allergy button styling */
 .menu_item h5{
     color: #D36D6D;
     font-size: 30px;
@@ -337,16 +344,16 @@ footer a img {
     background-color: #fff;
 }
 
-#menu_content > div > div > h2{
-    padding: 2rem 0 2rem 0;
-}
-
+/* Allergy button styling */
 .menu_item h5:hover{
     cursor:pointer;
     background-color:#D36D6D;
     color: #fff;
 }
 
+/* Responsive design */
+
+/* Make space for content on smaller screens */
 @media screen and (max-width: 1016px){
     #menu{
         margin: 0 0 0 5vw;
@@ -356,7 +363,7 @@ footer a img {
     }
     
 }
-
+/* Remove sidebar and make more space for content on even smaller screens + bigger boxes bc of more space*/
 @media screen and (max-width: 992px){
     #menu_sidebar{
         display: none;
@@ -369,6 +376,7 @@ footer a img {
     }
 }
 
+/* Remove bigger boxes on even smaller screens bc of less space */
 @media screen and (max-width: 768px){
     .menu_item{
         width: 300px;
