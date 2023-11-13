@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     document.getElementById("close-popup").addEventListener("click", function() {
         document.getElementById("popup").style.display = "none";
+        document.cookie = "popupShown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/";
     });
 
     const subscriptionForm = document.getElementById("subscription-form");
