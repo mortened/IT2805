@@ -3,17 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Find us</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karantina&family=Roboto&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/find_us.css">
 </head>
 <body>
     <iframe src="components/nav.html" frameborder="0"></iframe>
-    <div>
+    <div class="header">
         <h1>Find us</h1>
     </div>
-    <iframe id="footer-comp" src="components/footer.html" frameborder="0"></iframe>
+    <div id="visit">
+        <div id="visit_info">
+            <h1>Come visit us!</h1>
+            <h2>Adress:</h2>
+            <a id="map_link" target="_blank" href="https://www.google.com/maps/place/Olav+Tryggvasons+gt.+30,+7011+Trondheim/@63.4334214,10.3926849,17z/data=!3m1!4b1!4m6!3m5!1s0x466d319b62b11443:0x7f3e55822fa98b5e!8m2!3d63.433419!4d10.3952598!16s%2Fg%2F11cnd6rrq1?entry=ttu">
+                <p>Olav Tryggvasons Gt. 30</p>
+                <p>7011 Trondheim</p>
+            </a>
+            <h2>Opening Hours:</h2>
+            <p>Mon - Thur: 13-22</p>
+            <p>Fri - Sun: 12-23</p>
+        </div>
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1784.3961310784057!2d10.392684877530652!3d63.43342137602557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x466d319b62b11443%3A0x7f3e55822fa98b5e!2sOlav%20Tryggvasons%20gt.%2030%2C%207011%20Trondheim!5e0!3m2!1sno!2sno!4v1698428284820!5m2!1sno!2sno" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <div id="contact">
+        <h1>Contact us:</h1>
+        <div id="contact_info">
+            <a href="#"><img src="images/envelope.svg" alt="Email icon">contact@mammamia.com</a>
+            <a href="#"><img src="images/facebook.svg" alt="Facebook logo">Mamma Mia Trondheim</a>
+            <a href="#"><img src="images/instagram.svg" alt="Instagram icon">@mammamiatrondheim</a>
+            <a href="#"><img src="images/phone-call.svg" alt="Phone icon">+4764853210</a href="#">
+        </div>
+    </div>
+    <!--<iframe id="footer-comp" src="components/footer.html" frameborder="0"></iframe> -->
 </body>
 </html>
