@@ -16,6 +16,7 @@
         <h1>Menu</h1>
     </div>
     <div id="menu">
+        <!-- Sidebar with links to sections of the menu -->
         <div id="menu_sidebar">
             <ul>
                 <li><a href="#menu_food">Menu del Cibo</a>
@@ -37,18 +38,24 @@
                 </li>
             </ul>
         </div>
-        
+        <!-- The content of the menu - i.e. not the sidebar -->
         <div id="menu_content">
+            <!-- Food items on the menu -->
             <div id="menu_food">
                 <p>*Click the A to view allergies*</p><br>
                 <h2>Menu del Cibo</h2>
+                <!-- Starters on menu -->
                 <div id="antipasti">
                     <h2>Antipasti</h2>
+                    <!-- Boxes of a section in the menu -->
                     <div class="menu_boxes">
+                        <!-- Menu box containing menu item -->
+                        <!-- Structure is the same all the way through -->
                         <div class="menu_item">
                             <h3>Bruschetta</h3>
                             <h4>80,-</h4>
                             <p>Toasted bread topped with fresh tomatoes, garlic, basil, and olive oil.</p>
+                            <!-- Accessed in javascript to show the popup -->
                             <h5 id="bruschetta" class="allergy">A</h5>
                         </div>
                         <div class="menu_item">

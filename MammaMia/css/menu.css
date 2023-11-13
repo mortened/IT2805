@@ -19,7 +19,7 @@ body{
     margin: 0 0 0 15vw;
     padding: 0 0 50px 0;
 }
-
+/* Stick the sidebar to the left */
 #menu_sidebar{
     width: 20vw;
     float: left;
@@ -36,7 +36,7 @@ body{
 #menu_sidebar > ul{
     padding: 0;
 }
-
+/* Place the menu content on the right */
 #menu_content{
     width: 62vw;
     float: right;
@@ -44,7 +44,6 @@ body{
 }
 
 #menu_food, #menu_drinks{
-    margin: auto;
 }
 
 #menu_food > p{
