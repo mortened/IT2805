@@ -19,7 +19,7 @@ body{
     margin: 0 0 0 15vw;
     padding: 0 0 50px 0;
 }
-
+/* Stick the sidebar to the left */
 #menu_sidebar{
     width: 20vw;
     float: left;
@@ -33,11 +33,10 @@ body{
     list-style-type: none;
 }
 
-
 #menu_sidebar > ul{
     padding: 0;
 }
-
+/* Place the menu content on the right */
 #menu_content{
     width: 62vw;
     float: right;
@@ -99,6 +98,7 @@ body{
 
 #menu_sidebar a{
     text-decoration: none;
+    color: #000;
 }
 
 #menu_sidebar a:visited{

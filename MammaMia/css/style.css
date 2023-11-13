@@ -20,33 +20,43 @@ iframe {
     height: 120px;
 }
 
+#buttons {
+    margin-left: 10vw;
+}
 
 #buttons div {
     text-align: center;
-    background-color: #a4a4a4;
-    opacity: 80%;
-    width: 400px;
     margin: 30px auto;
-    padding: 25px;
-    margin: 75px 40%;
-    border-radius: 10px;
+    width: 300px;
+    margin-bottom: 70px;
 }
 
-#buttons div:hover {
+#buttons div a {
+    background-color: #a4a4a4;
+    opacity: 80%;
+    display: block;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px auto;
+}
+
+#buttons div a:hover {
     opacity: 100%;
 }
 
 #buttons div a {
     color: black;
     text-decoration: none;
-    font-size: 50px;
+    font-size: 40px;
 }
 
 #footer-comp {
     width: 100%;
 }
 
-
+#footer-comp {
+    width: 100%;
+}
 
 #popup {
     display: none;

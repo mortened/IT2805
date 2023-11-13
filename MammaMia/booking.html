@@ -30,7 +30,7 @@
                 <label for="booker-email">E-mail</label><br>
                 <input type="email" name="booker-email" id="booker-email" class="data-input cursor-text" required><br><br>
 
-                <label for="booker-phone">Phone Number (Optional)</label><br>
+                <label for="booker-phone">Phone Number <span class="notes">(Optional)</span></label><br>
                 <input type="tel" name="booker-phone" id="booker-phone" class="data-input cursor-text" minlength="8" maxlength="8"><br><br>
 
                 <!-- To avoid errors: Value attribute in options is set to not have a value. Empty option has been added. -->
@@ -56,25 +56,12 @@
                 <label for="booking-time">Preferred Time</label><br>
                 <select name="booking-time" id="booking-time" class="data-input cursor-pointer" required>
                     <option disabled selected value="">&nbsp;</option>
-                    <option value="">16:00</option>
-                    <option value="">16:30</option>
-                    <option value="">17:00</option>
-                    <option value="">17:30</option>
-                    <option value="">18:00</option>
-                    <option value="">18:30</option>
-                    <option value="">19:00</option>
-                    <option value="">19:30</option>
-                    <option value="">20:00</option>
-                    <option value="">20:30</option>
-                    <option value="">21:00</option>
-                    <option value="">21:30</option>
-                    <option value="">22:00</option>
                 </select><br><br>
 
                 <input type="submit" id="book-table-submission-button" class="data-input cursor-pointer" value="Book Table" onclick="confirmationValidation()">
             </form>
         </div>
-        <div class="wrapper" id="notes">
+        <div class="wrapper notes">
             <p>* For parties over 10, please contact us directly</p>
         </div>
     </div>
