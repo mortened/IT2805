@@ -1,3 +1,6 @@
+// Other than the lectures and course resources, I have taken inspiration and used information from the following sites (Never directly copied code):
+// https://www.w3schools.com/
+// https://chat.openai.com/ (Primarily for explaining concepts I was struggling to understand.)
 
 // A function to make a booking confirmation textbox visible to simulate an actual reservation has been placed.
 function confirmationValidation() {    
