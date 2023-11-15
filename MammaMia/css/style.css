@@ -381,7 +381,12 @@ footer a img {
     .menu_item{
         width: 300px;
     }
+    .menu_item h3, .menu_item h4{
+        font-size: 30px;
+    }
 }
+
+
 
 /* Menu Stop */
 
@@ -496,10 +501,6 @@ form > label {
 /* When the window is resized, do not make the content too small. */
 @media screen and (max-width: 600px) {
     .wrapper {
-        min-width: 230px;
-    }
-
-    #notes {
         min-width: 230px;
     }
 
