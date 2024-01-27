@@ -1,10 +1,39 @@
+/* General start */
+
 body {
     font-family: 'Karantina', Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    min-height: 100vh;
 }
+
+.iframe{
+    z-index: 2;
+    border: 0px;
+    height: 120px;
+}
+
+.header{
+    height: 120px;
+    background-color: #9dcf8f;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.header > h1{
+    margin-left: 15vw;
+    color: #ffff;
+}
+
+/* General Stop */
+
+
+/* Home  Start */
 
 #home {
     background-image: url("../images/backgroundImage.jpg");
@@ -16,34 +45,719 @@ body {
     justify-content: center;
 }
 
-iframe {
-    height: 120px;
+#buttons {
+    margin-left: 10vw;
 }
-
 
 #buttons div {
     text-align: center;
-    background-color: #a4a4a4;
-    opacity: 80%;
-    width: 400px;
     margin: 30px auto;
-    padding: 25px;
-    margin: 75px 40%;
-    border-radius: 10px;
+    width: 300px;
+    margin-bottom: 70px;
 }
 
-#buttons div:hover {
+#buttons div a {
+    background-color: #a4a4a4;
+    opacity: 80%;
+    display: block;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px auto;
+}
+
+#buttons div a:hover {
     opacity: 100%;
 }
 
 #buttons div a {
     color: black;
     text-decoration: none;
-    font-size: 50px;
+    font-size: 40px;
 }
 
-#footer-comp {
+#popup {
+    display: none;
     position: fixed;
-    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Home Stop */
+
+
+/* Nav start */
+
+nav {
+    background-color: #9dcf8f;
+    color: #fff;
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+nav img {
+    height: min(70px, 10vw);
+    padding-left: 5vw;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: min(4vw, 50px);
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+nav ul a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 5px;
+    background-color: #D36D6D;
+    bottom: -7px;
+    left: 0;
+    transition: width 0.3s;
+}
+
+nav ul a:hover::before {
     width: 100%;
 }
+
+nav ul {
+    list-style: none;
+    margin-right: 2vw;
+    display: flex;
+    justify-content: space-between;
+    width: 60vw;
+    padding-left: 0%;
+}
+
+@media screen and (max-width: 700px) {
+    nav img {
+        display: none;
+    }
+
+    nav a {
+        font-size: 30px;
+    }
+
+    nav ul {
+        width: 100vw;
+    }
+
+
+}
+
+/* Nav stop */
+
+/* Footer Start */
+
+footer {
+    background-color: #a4a4a4;
+    padding: 10px;
+    text-align: center;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;   
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+    font-size: min(2.2vw, 35px);
+    padding: 20px;
+}
+
+footer a:hover {
+    color: #656565;
+}
+
+footer a img {
+    height: 20px;
+    padding-right: 5px;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        flex-direction: column;
+    }
+
+    footer a {
+        padding: 0;
+        font-size: 22px;
+    }
+    footer a img {
+        height: 2.5vw;
+    }  
+}
+/* Footer Stop */
+
+/* Menu Start */
+
+/* Push content to the left and add space between menu and footer */
+#menu{
+    margin: 0 0 0 15vw;
+    padding: 0 0 50px 0;
+}
+/* Stick the sidebar to the left of the screen */
+#menu_sidebar{
+    width: 20vw;
+    float: left;
+    position: sticky;
+    top: 0;
+    font-size: 30px;
+}
+
+/* Vertical spacing and removal of bullet points from list sidebar */
+#menu_sidebar ul{
+    line-height: 60px;
+    list-style-type: none;
+}
+
+/* Remove preset left padding on the outer lists in sidebar */
+#menu_sidebar > ul{
+    padding: 0;
+}
+/* Place the menu content on the right */
+#menu_content{
+    width: 62vw;
+    float: right;
+    margin: 3vh 0 0 0;
+}
+
+/* For better control later */
+#menu_content h2, #menu_content h3, #menu_content h4, #menu_content p{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styling on info text about allergies */
+#menu_food > p{
+    color: #878787;
+    font-size: 30px;
+    padding: 10px 0 20px 0;
+}
+
+
+#menu_drinks{
+    margin-top: 5vh;
+}
+
+/* Headline of food and drinks menu have red underlines */
+#menu_content > div >h2{
+    border-bottom:2px solid #D36D6D;
+}
+
+#menu_content h2{
+    font-size: 45px;
+}
+
+.menu_item h3, .menu_item h4{
+    font-size: 32px;
+    width: fit-content;
+}
+
+/* Space around subheadings, i.e. pizzas, starters etc */
+#menu_content > div > div > h2{
+    padding: 2rem 0 2rem 0;
+}
+
+/* Styling an sizing of menu item boxes */
+.menu_item{
+    padding: 1em;
+    /* Includes padding in sizing */
+    box-sizing: border-box;
+    height: 150px;
+    width: 300px;
+    background-color: rgba(250, 230, 220, 0.7);
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.menu_item p{
+    font-size: 25px;
+    margin-top: 0.5em;
+    width: 100%;
+}
+
+/* Ensures flexible placements of boxes with a set gap, wraps on next line */
+.menu_boxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Removes preset link style */
+#menu_sidebar a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* Hover effects on sidebar */
+#menu_sidebar a:hover{
+    cursor: pointer;
+    color: #D36D6D;
+}
+
+/* Price on right in grey */
+.menu_item h4{
+    float: right;
+    color: #878787;
+}
+
+/* Allergy button styling */
+.menu_item h5{
+    color: #D36D6D;
+    font-size: 30px;
+    float: right;
+    margin: 10px 0 0 0;
+    padding: 0 10px 0 10px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* Allergy button styling */
+.menu_item h5:hover{
+    cursor:pointer;
+    background-color:#D36D6D;
+    color: #fff;
+}
+
+/* Responsive design */
+
+/* Make space for content on smaller screens */
+@media screen and (max-width: 1016px){
+    #menu{
+        margin: 0 0 0 5vw;
+    }
+    #menu_content{
+        width: 70vw;
+    }
+    
+}
+/* Remove sidebar and make more space for content on even smaller screens + bigger boxes bc of more space*/
+@media screen and (max-width: 992px){
+    #menu_sidebar{
+        display: none;
+    }
+    .menu_item{
+        width: 330px;
+    }
+    #menu_content{
+        width: 90vw;
+    }
+}
+
+/* Remove bigger boxes on even smaller screens bc of less space */
+@media screen and (max-width: 768px){
+    .menu_item{
+        width: 300px;
+    }
+    .menu_item h3, .menu_item h4{
+        font-size: 30px;
+    }
+}
+
+
+
+/* Menu Stop */
+
+/* Booking Start */
+
+/* Make the headline of the page an appropriate size. */
+.headline > h2 {
+    font-size: 35px;
+}
+
+/* Align content in the center of the page. */
+.container {
+    text-align: center;
+}
+
+/* Align input labels to the left for aesthetic reasons, make the content adjustable with window size. */
+.wrapper {
+    text-align: left;
+    margin: 30px auto 0;
+    width: 50%;
+}
+
+/* Make the input labels an appropriate size. */
+form > label {
+    font-size: 25px;
+}
+
+/* Make the input fields have an appropriate size and style. */
+.data-input {
+    border: none;
+    border-bottom: solid black 1px;
+    margin: 3px 0;
+    width: 100%;
+    height: 27px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+#book-table-submission-button {
+    background-color: #D36D6D;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    height: 35px;
+    font-family: 'Karantina', Arial, sans-serif;
+    font-size: 25px;
+    margin: 0;
+}
+
+/* Change style of input fields when hovered over or selected. */
+#booking-party-size:hover, 
+#booking-party-size:focus, 
+#booking-time:hover, 
+#booking-time:focus {
+    border: none;
+    border-bottom: solid #D36D6D 3px;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+    margin-top: 5px;
+}
+
+.data-input:hover,
+.data-input:focus {
+    border: none;
+    border-bottom: solid #D36D6D 3px;
+    background-color: #f7f7f7;
+    border-radius: 3px;
+    margin-bottom: 1px;
+}
+
+#book-table-submission-button:hover {
+    border: #ae3f3f solid 2px;
+}
+
+#book-table-submission-button:active {
+    background-color: #ae3f3f;
+}
+
+/* Make the confirmation box have an appropriate size and style. */
+#confirmation-message {
+    background-color: #efffea;
+    margin: 0px auto;
+    width: 50%;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    border: solid #9dcf8f 4px;
+    border-radius: 3px;
+    display: none;
+}
+
+#confirmation-message > p {
+    margin: 15px;
+}
+
+/* Make notes in the page have an appropriate style and placement on the page. */
+.notes {
+    color: #c0c0c0;
+    margin: 0 auto 100px;
+    font-size: 20px;
+}
+
+/* Make the cursor the appropriate type for each input field. */
+.cursor-text {
+    cursor: text;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* When the window is resized, do not make the content too small. */
+@media screen and (max-width: 600px) {
+    .wrapper {
+        min-width: 230px;
+    }
+
+    #confirmation-message {
+        min-width: 230px;
+    }
+}
+
+/* Booking Stop */
+
+/* About us Start */
+
+/*Small adjustments for */
+  
+  #footer-comp{
+    z-index: 2;
+    border-radius: 0px;
+    border: 0;
+  }
+  
+  .h3{
+    margin: auto;
+    color: green;
+    font-size: 40px;
+    width: 700px;
+  
+  }
+  
+  .line {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    top: 0;
+    z-index: 1;
+    border-radius: 0px;
+  }
+  
+  /*Adjustments for the italian stripes*/
+  .left {
+    left: 50px;
+    height: 100%;
+  }
+  
+  .right {
+    right: 50px;
+    height: 100%;
+  }
+  
+  .ita_stripes{
+    height: 100%;
+  }
+  
+  
+  /*Hide Italian flags on phone screens, for better visibility*/
+  @media (max-width: 850px) {
+    .left, .right, .ita_stripes{
+      display: none;
+    }
+  
+  }
+  
+  /*Properties for the different parts of the webpage*/
+  .textbox{
+    margin: auto;
+    padding: 0.5em;
+    box-sizing: border-box;
+    width: 700px;
+    max-width: 90%;
+    background-color: rgba(250, 230, 220, 0.7);
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+  
+  #imageSlideshow {
+    position: relative;
+    width: 100vw;
+    height: 15vw;
+    margin: auto;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  .slide {
+    width: 30vw;
+    margin: auto;
+    position: relative;
+    transition-duration: 400ms;
+    text-align: center;
+  }
+  
+  /*Simple width for the Italian flags to keep their width*/
+  img {
+    width: 100%;
+  }
+  
+  /*Button, both size and hover function*/
+  .button {
+    width: 60px;
+    height: 40px;
+    cursor: pointer;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+  }
+  
+  .button:hover {
+    background-color: lightblue;
+    opacity: 70%;
+  
+  }
+  
+  /*Properties for the indicator div and its indicators inside, shows which picture is active*/
+  .indicator_div {
+    text-align: center;
+    margin-top: 10vw;
+  }
+  
+  .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #888;
+    display: inline-block;
+    margin: 0 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .indicator.active {
+    background-color: #f00;
+  }
+  
+  .indicator:hover{
+    color: red;
+  }
+  
+  /*Properties for each photo inside the slideshow (ss), adjusting the size*/
+  .ss{
+    width: 30vw;
+    height: 23vw;
+    border-radius: 10px;
+    text-align: center;
+  
+  }
+  
+/* About us Stop */
+
+/* Find us Start */
+
+/*styling of the header*/
+
+#visit_info h2, #contact h2{
+    margin-left: 15vw;
+    color: #d36d6d;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+#visit{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1px;
+}
+#visit_info {
+    flex: 1;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#visit_info > h3 {
+    margin-left: 18vw;
+    color: #000000;
+    font-size: 45px;
+    font-weight: 500;
+}
+
+#visit_info p {
+    margin-left: 20vw;
+    margin-top: -20px;
+    color: #000000;
+    font-size: 40px;
+    width: 250px;
+}
+
+#map_link {
+    text-decoration: none;
+    transition: color 0.1s;
+}
+
+/*When hovering over the address it gets lighter*/
+#map_link:hover > p {
+    color: #656565;
+}
+
+#map {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-right: 15vw;
+    margin-left: 30px;
+}
+
+/* #map > iframe {
+    width: 100%;
+    height: 400px;
+    display: inline-block;
+} */
+
+/*Styling  for the contact section*/
+#contact {
+    flex: 1;
+    display: inline-block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#contact_info {
+    flex-wrap: wrap;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#contact_info a {
+    color: black;
+    text-decoration: none;
+    font-size: 35px;
+    padding: 20px;
+    align-items: center;
+}
+
+/*When hovering over a specific contact link it gets lighter*/
+#contact_info a:hover {
+    color: #656565;
+}
+
+/*Sets size of the contact icons*/
+#contact_info img {
+    height: 30px;
+    padding-right: 10px;
+}
+
+/*Change placement of the map when window gets too narrow*/
+@media (max-width: 800px) {
+    #visit {
+        display: block;
+    }
+
+    #map {
+        margin-left: 15vw;
+        margin-bottom: 100px;
+        height: 300px;
+    }
+}
+
+/* Find us Stop */

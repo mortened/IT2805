@@ -3,17 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Page Title</title>
+    <title>Booking</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karantina&family=Roboto&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <iframe src="components/nav.html" frameborder="0"></iframe>
-    <div>
+    <iframe src="components/nav.html" class="iframe"></iframe>
+    <div class="header">
         <h1>Booking</h1>
     </div>
-    <iframe id="footer-comp" src="components/footer.html" frameborder="0"></iframe>
+    <div class="container">
+        <div class="headline">
+            <h2>Book a Table</h2>
+        </div>
+        <div id="confirmation-message">
+            <p>Your reservation is registered. Thank you for dining with us!</p>
+        </div>
+        <div class="wrapper">
+            <form id="form" autocomplete="off">                
+                <label for="booker-name">Full Name</label><br>
+                <input type="text" name="booker-name" id="booker-name" class="data-input cursor-text" required><br><br>
+
+                <label for="booker-email">E-mail</label><br>
+                <input type="email" name="booker-email" id="booker-email" class="data-input cursor-text" required><br><br>
+
+                <label for="booker-phone">Phone Number <span class="notes">(Optional)</span></label><br>
+                <input type="tel" name="booker-phone" id="booker-phone" class="data-input cursor-text" minlength="8" maxlength="8"><br><br>
+
+                <!-- To avoid errors: Value attribute in options is set to not have a value. Empty option has been added. -->
+                <label for="booking-party-size">Party Size *</label><br>
+                <select name="booking-party-size" id="booking-party-size" class="data-input cursor-pointer" required> 
+                    <option disabled selected value="">&nbsp;</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                    <option value="">9</option>
+                    <option value="">10</option>
+                </select><br><br>
+
+                <label for="booking-date">Date of Your Visit</label><br>
+                <input type="date" name="booking-date" id="booking-date" class="data-input cursor-text" required><br><br>
+
+                <!-- To avoid errors: Value attribute in options is set to not have a value. Empty option has been added. -->
+                <label for="booking-time">Preferred Time</label><br>
+                <select name="booking-time" id="booking-time" class="data-input cursor-pointer" required>
+                    <option disabled selected value="">&nbsp;</option>
+                </select><br><br>
+
+                <input type="submit" id="book-table-submission-button" class="data-input cursor-pointer" value="Book Table" onclick="confirmationValidation()">
+            </form>
+        </div>
+        <div class="wrapper notes">
+            <p>* For parties over 10, please contact us directly</p>
+        </div>
+    </div>
+    <iframe id="footer-comp" src="components/footer.html" class="iframe"></iframe>
+
+    <script src="script/booking.js"></script>
 </body>
 </html>

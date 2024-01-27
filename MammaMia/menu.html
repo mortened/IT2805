@@ -8,17 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karantina&family=Roboto&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
-    <iframe src="components/nav.html" frameborder="0"></iframe>
+    <iframe src="components/nav.html" class="iframe"></iframe>
     <div class="header">
         <h1>Menu</h1>
     </div>
     <div id="menu">
+        <!-- Sidebar with links to sections of the menu -->
         <div id="menu_sidebar">
             <ul>
-                <li>Menu del Cibo
+                <li><a href="#menu_food">Menu del Cibo</a>
                     <ul>
                         <li><a href="#antipasti">Antipasti</a></li>
                         <li><a href="#insalate">Insalate</a></li>
@@ -27,7 +27,7 @@
                         <li><a href="#dolci">Dolci</a></li>
                     </ul>
                 </li>
-                <li>Menu delle Bevande
+                <li><a href="#menu_drinks">Menu delle Bevande</a>
                     <ul>
                         <li><a href="#bevande_analcoliche">Bevande Analcoliche</a></li>
                         <li><a href="#vini">Vini</a></li>
@@ -37,16 +37,24 @@
                 </li>
             </ul>
         </div>
-        
+        <!-- The content of the menu - i.e. not the sidebar -->
         <div id="menu_content">
+            <!-- Food items on the menu -->
             <div id="menu_food">
+                <p>*Click the A to view allergies*</p><br>
+                <h2>Menu del Cibo</h2>
+                <!-- Starters on menu -->
                 <div id="antipasti">
                     <h2>Antipasti</h2>
+                    <!-- Boxes of a section in the menu -->
                     <div class="menu_boxes">
+                        <!-- Menu box containing menu item -->
+                        <!-- Structure is the same all the way through -->
                         <div class="menu_item">
                             <h3>Bruschetta</h3>
                             <h4>80,-</h4>
                             <p>Toasted bread topped with fresh tomatoes, garlic, basil, and olive oil.</p>
+                            <!-- Accessed in javascript to show the popup -->
                             <h5 id="bruschetta" class="allergy">A</h5>
                         </div>
                         <div class="menu_item">
@@ -82,7 +90,6 @@
                             <h3>Garden Salad</h3>
                             <h4>95,-</h4>
                             <p>Mixed greens, cherry tomatoes, cucumbers, and your choice of dressing.</p>
-                            <h5 id="garden_salad" class="allergy">A</h5>
                         </div>
                         <div class="menu_item">
                             <h3>Arugula & Prosciutto</h3>
@@ -211,6 +218,7 @@
                 </div>
             </div>
             <div id="menu_drinks">
+                <h2>Menu delle Bevande</h2>
                 <div id="bevande_analcoliche">
                     <h2>Bevande Analcoliche</h2>
                     <div class="menu_boxes">
@@ -335,7 +343,7 @@
             </div>
         </div>
     </div>
-    <iframe id="footer-comp" src="components/footer.html" frameborder="0"></iframe>
+    <iframe id="footer-comp" src="components/footer.html" class="iframe"></iframe>
     <script src="script/allergenInfo.js"></script>
 </body>
 </html>
